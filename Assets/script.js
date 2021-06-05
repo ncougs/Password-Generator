@@ -20,10 +20,8 @@ function getMaxLenth () {
 
 maxLenth = getMaxLenth()
 
-function 
-
 // Generate random uppercase characters from alphaCharacters array
-  function randomUppercase () {
+function randomUppercase () {
     // Declare random true of false variable.
     var randomBoolean;
    
@@ -39,11 +37,7 @@ function
     }
    
     return alphaCharacters
-   }
-
-
-
-
+   };
 
  // join the arrays together for the global password array
  var globalCharaters = alphaCharacters.concat(numberCharacters,specialCharacters); 
