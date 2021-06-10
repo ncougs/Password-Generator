@@ -25,11 +25,11 @@ function generatePassword () {
   result = window.prompt("How many characters would you like in the Password? (Minimum of 8 characters and maximum of 128 characters");
 
   if (result < 8) {
-    window.alert("You must input a number Greater than 8 characters");
+    window.alert("Your password must be greater than 8 characters");
     getMaxLength();
   }
   else if (result > 128) {
-    window.alert("You must input a number less than than 128 characters");
+    window.alert("Your password must be less than 128 characters");
     getMaxLength();
   };
   
@@ -131,6 +131,11 @@ if (isnumberic) {
 // Finally check if special characters should be added
 if (isSpecialCharacters) {
   globalCharaters = globalCharaters.concat(specialCharacters);
+};
+
+if (globalCharaters.length===0) {
+  window.alert("No password options defined, please start again");
+  return generatePassword();
 };
 
 // Global character array has been created. 
